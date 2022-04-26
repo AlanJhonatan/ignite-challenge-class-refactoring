@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import { Form as Unform } from '@unform/web';
+import React from 'react';
+import { FormHandles } from '@unform/core';
 
-export const Form = styled(Unform)`
+interface FormProps {
+  ref: React.RefObject<FormHandles>
+}
+
+export const Form = styled(Unform)<FormProps>`
   padding: 48px 40px;
   display: flex;
   flex-direction: column;
